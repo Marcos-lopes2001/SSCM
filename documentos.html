@@ -95,7 +95,7 @@
                         <span class="documento-icon">🎵</span>
                         <h3>Hino Nacional</h3>
                         <p>Hino Nacional de Moçambique</p>
-                        <button onclick="baixarArquivo('Hino_Nacional.pptx', 'Hino-Nacional.docx')" class="btn-download">
+                        <button onclick="baixarArquivo('Hino_Nacional.docx', 'Hino-Nacional.pptx')" class="btn-download">
                             📥 Baixar DOCX
                         </button>
                     </div>
@@ -111,7 +111,44 @@
                     </div>
 
                     <!-- Documento 7 -->
-                   
+                    <div class="documento-card fade-up delay-6">
+                        <span class="documento-icon">📑</span>
+                        <h3>Tudo PowerPoint - Apresentações</h3>
+                        <p>Apresentações completas do evento</p>
+                        <button onclick="baixarArquivo('Tudo_PowerPoint.zip', 'Apresentacoes-Completas.zip')" class="btn-download">
+                            📥 Baixar ZIP
+                        </button>
+                    </div>
+
+                    <!-- Documento 8 - NOVO -->
+                    <div class="documento-card fade-up delay-7">
+                        <span class="documento-icon">🏥</span>
+                        <h3>Apresentação CEM 2026</h3>
+                        <p>Apresentacao CEM 26 (1)</p>
+                        <button onclick="baixarArquivo('Apresentacao_CEM_26_(1).pptx', 'Apresentacao-CEM-2026.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 9 - NOVO -->
+                    <div class="documento-card fade-up delay-8">
+                        <span class="documento-icon">🏥</span>
+                        <h3>Apresentação CHA Ponta de Ouro</h3>
+                        <p>Apresentacao do Cha Ponta de Ouro Reuniao de PESOE 2027 (1)</p>
+                        <button onclick="baixarArquivo('Apresentacao_do_Cha_Ponta_de_Ouro_Reuniao_de_PESOE_2027_(1).pptx', 'Apresentacao-CHA-Ponta-de-Ouro.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 10 - NOVO -->
+                    <div class="documento-card fade-up delay-9">
+                        <span class="documento-icon">🏥</span>
+                        <h3>Apresentação HGC</h3>
+                        <p>Apresentacao do HGC Reuniao de PESOE 2027 VF</p>
+                        <button onclick="baixarArquivo('Apresentacao_do_HGC_Reuniao_de_PESOE_2027_VF.pptx', 'Apresentacao-HGC-Reuniao-PESOE-2027.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,7 +285,7 @@
 
         document.querySelectorAll('.documento-card').forEach(function(card, index) {
             card.classList.add('fade-up');
-            var delay = Math.min(index % 7 + 1, 7);
+            var delay = Math.min(index % 10 + 1, 10);
             card.classList.add('delay-' + delay);
         });
     </script>
