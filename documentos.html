@@ -50,13 +50,73 @@
                 </div>
 
                 <div class="documentos-grid">
-                    <!-- Documento 1 - CORRIGIDO -->
+                    <!-- Documento 1 -->
                     <div class="documento-card fade-up">
                         <span class="documento-icon">📄</span>
                         <h3>Carteira Programas Actualizada 2026</h3>
                         <p>Carteira_Programas_Actualizada_2026_2906</p>
                         <button onclick="baixarArquivo('Carteira_Programas_Actualizada_2026_2906.docx', 'Carteira-Programas-Actualizada-2026.docx')" class="btn-download">
                             📥 Baixar DOCX
+                        </button>
+                    </div>
+
+                    <!-- Documento 2 -->
+                    <div class="documento-card fade-up delay-1">
+                        <span class="documento-icon">📘</span>
+                        <h3>Metodologias e Orientações do PESOE 2027</h3>
+                        <p>Helena_Metodologias e Orientações do PESOE 2027 UV 14.05.2026</p>
+                        <button onclick="baixarArquivo('Helena_Metodologias_e_Orientações_do_PESOE_2027_UV_14.05.2026.pptx', 'Metodologias-e-Orientacoes-PESOE-2027.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 3 -->
+                    <div class="documento-card fade-up delay-2">
+                        <span class="documento-icon">📋</span>
+                        <h3>Agenda do Evento</h3>
+                        <p>Agenda Reunião de Planificação 2026</p>
+                        <button onclick="baixarArquivo('Agenda_Reuniao_Planificacao_2026.docx', 'Agenda-Reuniao-Planificacao-2026.docx')" class="btn-download">
+                            📥 Baixar DOCX
+                        </button>
+                    </div>
+
+                    <!-- Documento 4 -->
+                    <div class="documento-card fade-up delay-3">
+                        <span class="documento-icon">📈</span>
+                        <h3>Do Gestor ao Líder</h3>
+                        <p>Gestão e Liderança - Do Gestor ao Líder</p>
+                        <button onclick="baixarArquivo('Do_Gestor_ao_Lider.pptx', 'Do-Gestor-ao-Lider.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 5 -->
+                    <div class="documento-card fade-up delay-4">
+                        <span class="documento-icon">🎵</span>
+                        <h3>Hino Nacional</h3>
+                        <p>Hino Nacional de Moçambique</p>
+                        <button onclick="baixarArquivo('Hino_Nacional.docx', 'Hino-Nacional.docx')" class="btn-download">
+                            📥 Baixar DOCX
+                        </button>
+                    </div>
+
+                    <!-- Documento 6 -->
+                    <div class="documento-card fade-up delay-5">
+                        <span class="documento-icon">📊</span>
+                        <h3>Template Reunião PESOE 2027 - Cenário Fiscal</h3>
+                        <p>Zacarias_Template Reuniao de PESOE 2027_Cenario Fiscal</p>
+                        <button onclick="baixarArquivo('Zacarias_Template_Reuniao_PESOE_2027_Cenario_Fiscal.pptx', 'Template-Reuniao-PESOE-2027-Cenario-Fiscal.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 7 -->
+                    <div class="documento-card fade-up delay-6">
+                        <span class="documento-icon">📑</span>
+                        <h3>Tudo PowerPoint - Apresentações</h3>
+                        <p>Apresentações completas do evento</p>
+                        <button onclick="baixarArquivo('Tudo_PowerPoint.zip', 'Apresentacoes-Completas.zip')" class="btn-download">
+                            📥 Baixar ZIP
                         </button>
                     </div>
                 </div>
@@ -131,21 +191,16 @@
         });
 
         // ============================================
-        // FUNÇÃO DE DOWNLOAD CORRIGIDA
+        // FUNÇÃO DE DOWNLOAD
         // ============================================
         function baixarArquivo(nomeArquivo, nomeDownload) {
-            // Caminho do arquivo na pasta assets/docs/
             const url = 'assets/docs/' + nomeArquivo;
-            
-            // Pega o botão que foi clicado
             const btn = event.target;
             const textoOriginal = btn.innerHTML;
             
-            // Mostra loading
             btn.innerHTML = '⏳ Baixando...';
             btn.disabled = true;
             
-            // Tenta baixar o arquivo
             fetch(url)
                 .then(function(response) {
                     if (!response.ok) {
@@ -154,7 +209,6 @@
                     return response.blob();
                 })
                 .then(function(blob) {
-                    // Cria link para download
                     const blobUrl = URL.createObjectURL(blob);
                     const link = document.createElement('a');
                     link.href = blobUrl;
@@ -164,7 +218,6 @@
                     document.body.removeChild(link);
                     URL.revokeObjectURL(blobUrl);
                     
-                    // Restaura o botão
                     btn.innerHTML = '✅ Baixado!';
                     btn.disabled = false;
                     setTimeout(function() {
@@ -202,7 +255,7 @@
 
         document.querySelectorAll('.documento-card').forEach(function(card, index) {
             card.classList.add('fade-up');
-            var delay = Math.min(index % 5 + 1, 5);
+            var delay = Math.min(index % 7 + 1, 7);
             card.classList.add('delay-' + delay);
         });
     </script>
