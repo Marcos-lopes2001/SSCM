@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos - Reunião de Planificação 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .fotos-page {
+            padding: 40px 0 60px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .page-header h1 {
+            font-size: 40px;
+            color: #1a202c;
+        }
+
+        .page-header p {
+            color: #718096;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        .resumo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 800px;
+            margin: 30px auto;
+            border: 1px solid #e2e8f0;
+        }
+
+        .resumo-card .icone-grande {
+            font-size: 72px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .resumo-card h2 {
+            font-size: 28px;
+            color: #1a202c;
+            margin-bottom: 16px;
+        }
+
+        .resumo-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        .resumo-card .data-evento {
+            display: inline-block;
+            background: #f7fafc;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .btn-google-drive {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #4285f4;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-google-drive:hover {
+            background: #3367d6;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.35);
+        }
+
+        .btn-google-drive .drive-icon {
+            font-size: 28px;
+        }
+
+        .info-adicional {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-adicional p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .info-adicional strong {
+            color: #1a202c;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 28px;
+            }
+            .resumo-card {
+                padding: 24px 20px;
+                margin: 20px 15px;
+            }
+            .resumo-card .icone-grande {
+                font-size: 48px;
+            }
+            .resumo-card h2 {
+                font-size: 22px;
+            }
+            .btn-google-drive {
+                padding: 14px 24px;
+                font-size: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <div class="emblema">
+                    <img src="assets/images/logo.png" alt="Emblema" class="logo-img">
+                </div>
+                <div class="titulo-logo">
+                    <span class="pequeno">Serviço da Saúde da Cidade de Maputo</span>
+                    <h1>Reunião de Planificação</h1>
+                    <span class="subtitulo">Maputo 2026</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="participantes.html">Participantes</a></li>
+                    <li><a href="documentos.html">Documentos</a></li>
+                    <li><a href="fotos.html" class="active">Fotos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>📸 Resumo Fotográfico</h1>
+                <p>Dia da Abertura da Reunião de Planificação Integrada</p>
+            </div>
+        </section>
+
+        <section class="fotos-page">
+            <div class="container">
+                <div class="resumo-card">
+                    <span class="icone-grande">📸</span>
+                    <h2>Dia da Abertura</h2>
+                    <div class="data-evento">
+                        📅 01 de Julho de 2026 · Ponta de Ouro
+                    </div>
+                    <p>
+                        Registos fotográficos do primeiro dia da <strong>Reunião de Planificação Integrada</strong>, 
+                        que contou com a presença da <strong>Sra. Directora do Serviço de Saúde da Cidade de Maputo</strong>, 
+                        membros do Presídium, chefes de departamento, diretores distritais, 
+                        representantes dos hospitais e parceiros de cooperação.
+                    </p>
+                    <p>
+                        As fotos capturam os melhores momentos da cerimónia de abertura, 
+                        apresentações, painéis de debate e a confraternização entre os participantes.
+                    </p>
+                    
+                    <a href="https://drive.google.com/drive/folders/SEU-LINK-AQUI" target="_blank" class="btn-google-drive">
+                        <span class="drive-icon">☁️</span>
+                        Baixar Fotos no Google Drive
+                    </a>
+
+                    <div class="info-adicional">
+                        <p><strong>📌 Instruções:</strong></p>
+                        <p>Clique no botão acima para aceder à pasta no Google Drive.</p>
+                        <p>Pode visualizar as fotos online ou fazer o download de todas as imagens.</p>
+                        <p style="margin-top: 8px; font-size: 13px; color: #a0aec0;">
+                            ⚠️ Caso o link não funcione, entre em contacto com a organização.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Emblema" class="logo-footer">
+                        <div>
+                            <h3>Reunião de Planificação</h3>
+                        </div>
+                    </div>
+                    <p class="footer-pais">Moçambique</p>
+                    <p class="footer-desc">Plataforma oficial da Reunião de Planificação do Serviço de Saúde da Cidade de Maputo.</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="participantes.html">Participantes</a></li>
+                            <li><a href="documentos.html">Documentos</a></li>
+                            <li><a href="fotos.html">Fotos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Evento</h4>
+                        <ul>
+                            <li>Reunião de Planificação</li>
+                            <li>01 a 04 de Julho de 2026</li>
+                            <li>Ponta de Ouro</li>
+                            <li>Província de Maputo</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="mailto:dpc@sscm.gov.mz">dpc@sscm.gov.mz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Serviço da Saúde da Cidade de Maputo. Todos os direitos reservados.</p>
+                <p class="lema-footer">"Plano Único, Um Orçamento Único e Uma Monitoria e Avaliação"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navList = document.getElementById('navList');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navList.classList.toggle('active');
+            });
+        }
+
+        document.querySelectorAll('.nav-list a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
