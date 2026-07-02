@@ -29,57 +29,89 @@
             font-size: 18px;
         }
 
+        .fotos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
         .resumo-card {
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 35px 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
-            max-width: 800px;
-            margin: 30px auto;
             border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .resumo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-color: #d4a537;
         }
 
         .resumo-card .icone-grande {
-            font-size: 72px;
+            font-size: 56px;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        .resumo-card .dia-tag {
+            display: inline-block;
+            background: #d4a537;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .resumo-card .dia-tag.dia1 {
+            background: #d4a537;
+        }
+
+        .resumo-card .dia-tag.dia2 {
+            background: #4299e1;
         }
 
         .resumo-card h2 {
-            font-size: 28px;
+            font-size: 24px;
             color: #1a202c;
-            margin-bottom: 16px;
-        }
-
-        .resumo-card p {
-            color: #4a5568;
-            line-height: 1.7;
-            margin-bottom: 24px;
-            font-size: 16px;
+            margin-bottom: 10px;
         }
 
         .resumo-card .data-evento {
             display: inline-block;
             background: #f7fafc;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 13px;
             color: #4a5568;
+            margin-bottom: 16px;
+        }
+
+        .resumo-card p {
+            color: #4a5568;
+            line-height: 1.6;
             margin-bottom: 20px;
+            font-size: 14px;
         }
 
         .btn-google-drive {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             background: #4285f4;
             color: white;
-            padding: 16px 40px;
-            border-radius: 12px;
+            padding: 12px 28px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 15px;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
@@ -92,24 +124,37 @@
         }
 
         .btn-google-drive .drive-icon {
-            font-size: 28px;
+            font-size: 24px;
         }
 
-        .info-adicional {
-            margin-top: 30px;
-            padding: 20px;
+        .btn-google-drive.dia2-drive {
+            background: #48bb78;
+        }
+
+        .btn-google-drive.dia2-drive:hover {
+            background: #38a169;
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.35);
+        }
+
+        .total-fotos {
+            text-align: center;
+            margin-top: 20px;
+            padding: 16px;
             background: #f7fafc;
             border-radius: 12px;
             border: 1px solid #e2e8f0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .info-adicional p {
-            margin: 5px 0;
+        .total-fotos p {
+            margin: 0;
             font-size: 14px;
             color: #4a5568;
         }
 
-        .info-adicional strong {
+        .total-fotos strong {
             color: #1a202c;
         }
 
@@ -117,19 +162,23 @@
             .page-header h1 {
                 font-size: 28px;
             }
+            .fotos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
             .resumo-card {
                 padding: 24px 20px;
-                margin: 20px 15px;
             }
             .resumo-card .icone-grande {
-                font-size: 48px;
+                font-size: 40px;
             }
             .resumo-card h2 {
-                font-size: 22px;
+                font-size: 20px;
             }
             .btn-google-drive {
-                padding: 14px 24px;
-                font-size: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -155,9 +204,8 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="participantes.html">Participantes</a></li>
-                     <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="fotos.html" class="active">Fotos</a></li>
                     <li><a href="documentos.html">Documentos</a></li>
-                   
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
@@ -168,42 +216,56 @@
         <section class="page-header">
             <div class="container">
                 <h1> Resumo Fotográfico</h1>
-                <p>Dia da Abertura da Reunião de Planificação Integrada</p>
+                <p>Registos dos dias da Reunião de Planificação Integrada</p>
             </div>
         </section>
 
         <section class="fotos-page">
             <div class="container">
-                <div class="resumo-card">
-                    <span class="icone-grande"></span>
-                    <h2>Dia da Abertura</h2>
-                    <div class="data-evento">
-                         01 de Julho de 2026 · Ponta de Ouro
-                    </div>
-                    <p>
-                        Registos fotográficos do primeiro dia da <strong>Reunião de Planificação Integrada</strong>, 
-                        que contou com a presença da <strong>Sra. Directora do Serviço de Saúde da Cidade de Maputo</strong>, 
-                        membros do Presídium, chefes de departamento, diretores distritais, 
-                        representantes dos hospitais e parceiros de cooperação.
-                    </p>
-                    <p>
-                        As fotos capturam os melhores momentos da cerimónia de abertura, 
-                        apresentações, painéis de debate e a confraternização entre os participantes.
-                    </p>
-                    
-                    <a href="https://drive.google.com/drive/folders/1abU_dwGheBaRsi2-_SuQFF01sPPlrYtE" target="_blank" class="btn-google-drive">
-    <span class="drive-icon"></span>
-    Baixar Fotos no Google Drive
-</a>
-                      
-                    <div class="info-adicional">
-                        <p><strong> Instruções:</strong></p>
-                        <p>Clique no botão acima para aceder à pasta no Google Drive.</p>
-                        <p>Pode visualizar as fotos online ou fazer o download de todas as imagens.</p>
-                        <p style="margin-top: 8px; font-size: 13px; color: #a0aec0;">
-                             Caso o link não funcione, entre em contacto com a organização.
+                <div class="fotos-grid">
+                    <!-- DIA 1 -->
+                    <div class="resumo-card">
+                        <span class="icone-grande"></span>
+                        <span class="dia-tag dia1">Dia 1</span>
+                        <h2>Dia da Abertura</h2>
+                        <div class="data-evento">
+                             01 de Julho de 2026 · Ponta de Ouro
+                        </div>
+                        <p>
+                            Registos fotográficos do primeiro dia da <strong>Reunião de Planificação Integrada</strong>, 
+                            com a presença da <strong>Sra. Directora do Serviço de Saúde da Cidade de Maputo</strong>, 
+                            membros do Presídium, chefes de departamento, diretores distritais, 
+                            representantes dos hospitais e parceiros de cooperação.
                         </p>
+                        <a href="https://drive.google.com/drive/folders/1abU_dwGheBaRsi2-_SuQFF01sPPlrYtE" target="_blank" class="btn-google-drive">
+                            <span class="drive-icon">☁️</span>
+                            Baixar Fotos - Dia 1
+                        </a>
                     </div>
+
+                    <!-- DIA 2 -->
+                    <div class="resumo-card">
+                        <span class="icone-grande"></span>
+                        <span class="dia-tag dia2">Dia 2</span>
+                        <h2>Segundo Dia</h2>
+                        <div class="data-evento">
+                             02 de Julho de 2026 · Ponta de Ouro
+                        </div>
+                        <p>
+                            Registos fotográficos do segundo dia da <strong>Reunião de Planificação Integrada</strong>, 
+                            com momentos de trabalhos em grupo, apresentações técnicas, 
+                            discussões sobre o PESOE 2027 e a continuidade dos trabalhos 
+                            com a participação de todos os envolvidos.
+                        </p>
+                        <a href="https://drive.google.com/drive/folders/1YChamPYdLkX-F-vGdUnyGYhLHDS7SPAc" target="_blank" class="btn-google-drive dia2-drive">
+                            <span class="drive-icon">☁️</span>
+                            Baixar Fotos - Dia 2
+                        </a>
+                    </div>
+                </div>
+
+                <div class="total-fotos">
+                    <p> <strong>2 dias</strong> de registos fotográficos disponíveis para download</p>
                 </div>
             </div>
         </section>
@@ -230,8 +292,8 @@
                             <li><a href="index.html">Início</a></li>
                             <li><a href="agenda.html">Agenda</a></li>
                             <li><a href="participantes.html">Participantes</a></li>
-                            <li><a href="documentos.html">Documentos</a></li>
                             <li><a href="fotos.html">Fotos</a></li>
+                            <li><a href="documentos.html">Documentos</a></li>
                             <li><a href="sobre.html">Sobre</a></li>
                         </ul>
                     </div>
