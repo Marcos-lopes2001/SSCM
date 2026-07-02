@@ -6,6 +6,35 @@
     <title>Documentos - Reunião de Planificação 2026</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .categoria-documentos {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .categoria-documentos .categoria-icon {
+            font-size: 28px;
+        }
+
+        .categoria-documentos .categoria-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -26,7 +55,7 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="participantes.html">Participantes</a></li>
-                     <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
                     <li><a href="documentos.html" class="active">Documentos</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
@@ -50,106 +79,162 @@
                     <p>Clique nos botões para baixar diretamente</p>
                 </div>
 
+                <!-- ============================================ -->
+                <!-- DOCUMENTOS DO DIA 1 -->
+                <!-- ============================================ -->
+                <div class="categoria-documentos">
+                    <span class="categoria-icon">📅</span>
+                    Dia 1 - Quarta-feira, 01 de Julho
+                    <span class="categoria-badge">10 documentos</span>
+                </div>
+
                 <div class="documentos-grid">
                     <!-- Documento 1 -->
                     <div class="documento-card fade-up">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📄</span>
                         <h3>Carteira Programas Actualizada 2026</h3>
                         <p>Carteira_Programas_Actualizada_2026_2906</p>
                         <button onclick="baixarArquivo('Carteira_Programas_Actualizada_2026_2906.docx', 'Carteira-Programas-Actualizada-2026.docx')" class="btn-download">
-                             Baixar DOCX
+                            📥 Baixar DOCX
                         </button>
                     </div>
 
                     <!-- Documento 2 -->
                     <div class="documento-card fade-up delay-1">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📘</span>
                         <h3>Metodologias e Orientações do PESOE 2027</h3>
                         <p>Helena_Metodologias e Orientações do PESOE 2027 UV 14.05.2026</p>
                         <button onclick="baixarArquivo('Helena_Metodologias_e_Orientações_do_PESOE_2027_UV_14.05.2026.pptx', 'Metodologias-e-Orientacoes-PESOE-2027.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
 
                     <!-- Documento 3 -->
                     <div class="documento-card fade-up delay-2">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📋</span>
                         <h3>Agenda do Evento</h3>
                         <p>Agenda Reunião de Planificação 2026</p>
                         <button onclick="baixarArquivo('Agenda_Reuniao_Planificacao_2026.docx', 'Agenda-Reuniao-Planificacao-2026.docx')" class="btn-download">
-                             Baixar DOCX
+                            📥 Baixar DOCX
                         </button>
                     </div>
 
                     <!-- Documento 4 -->
                     <div class="documento-card fade-up delay-3">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📈</span>
                         <h3>Do Gestor ao Líder</h3>
                         <p>Gestão e Liderança - Do Gestor ao Líder</p>
                         <button onclick="baixarArquivo('Do_Gestor_ao_Lider.pptx', 'Do-Gestor-ao-Lider.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
 
                     <!-- Documento 5 -->
                     <div class="documento-card fade-up delay-4">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">🎵</span>
                         <h3>Hino Nacional</h3>
                         <p>Hino Nacional de Moçambique</p>
-                        <button onclick="baixarArquivo('Hino_Nacional.docx', 'Hino-Nacional.pptx')" class="btn-download">
-                             Baixar DOCX
+                        <button onclick="baixarArquivo('Hino_Nacional.docx', 'Hino-Nacional.docx')" class="btn-download">
+                            📥 Baixar DOCX
                         </button>
                     </div>
 
                     <!-- Documento 6 -->
                     <div class="documento-card fade-up delay-5">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📊</span>
                         <h3>Template Reunião PESOE 2027 - Cenário Fiscal</h3>
                         <p>Zacarias_Template Reuniao de PESOE 2027_Cenario Fiscal</p>
                         <button onclick="baixarArquivo('Zacarias_Template_Reuniao_PESOE_2027_Cenario_Fiscal.pptx', 'Template-Reuniao-PESOE-2027-Cenario-Fiscal.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
 
                     <!-- Documento 7 -->
                     <div class="documento-card fade-up delay-6">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">📦</span>
                         <h3>Tudo PowerPoint - Apresentações</h3>
                         <p>Apresentações completas do evento</p>
                         <button onclick="baixarArquivo('Tudo_PowerPoint.zip', 'Apresentacoes-Completas.zip')" class="btn-download">
-                            Baixar ZIP
+                            📥 Baixar ZIP
                         </button>
                     </div>
 
-                    <!-- Documento 8 - NOVO -->
+                    <!-- Documento 8 -->
                     <div class="documento-card fade-up delay-7">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">🏥</span>
                         <h3>Apresentação CEM 2026</h3>
                         <p>Apresentacao CEM 26 (1)</p>
                         <button onclick="baixarArquivo('Apresentacao_CEM_26_(1).pptx', 'Apresentacao-CEM-2026.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
 
-                    <!-- Documento 9 - NOVO -->
+                    <!-- Documento 9 -->
                     <div class="documento-card fade-up delay-8">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">🏥</span>
                         <h3>Apresentação CHA Ponta de Ouro</h3>
                         <p>Apresentacao do Cha Ponta de Ouro Reuniao de PESOE 2027 (1)</p>
                         <button onclick="baixarArquivo('Apresentacao_do_Cha_Ponta_de_Ouro_Reuniao_de_PESOE_2027_(1).pptx', 'Apresentacao-CHA-Ponta-de-Ouro.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
 
-                    <!-- Documento 10 - NOVO -->
+                    <!-- Documento 10 -->
                     <div class="documento-card fade-up delay-9">
-                        <span class="documento-icon"></span>
+                        <span class="documento-icon">🏥</span>
                         <h3>Apresentação HGC</h3>
                         <p>Apresentacao do HGC Reuniao de PESOE 2027 VF</p>
                         <button onclick="baixarArquivo('Apresentacao_do_HGC_Reuniao_de_PESOE_2027_VF.pptx', 'Apresentacao-HGC-Reuniao-PESOE-2027.pptx')" class="btn-download">
-                             Baixar PowerPoint
+                            📥 Baixar PowerPoint
                         </button>
                     </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- DOCUMENTOS DO DIA 2 -->
+                <!-- ============================================ -->
+                <div class="categoria-documentos">
+                    <span class="categoria-icon">📅</span>
+                    Dia 2 - Quinta-feira, 02 de Julho
+                    <span class="categoria-badge">3 documentos</span>
+                </div>
+
+                <div class="documentos-grid">
+                    <!-- Documento 11 - NOVO -->
+                    <div class="documento-card fade-up delay-10">
+                        <span class="documento-icon">📊</span>
+                        <h3>MISAU_DSCM - Reunião PESOE 2027</h3>
+                        <p>Misau_DSCM_Reuniao de PESOE 2027</p>
+                        <button onclick="baixarArquivo('Misau_DSCM_Reuniao_de_PESOE_2027.pptx', 'MISAU-DSCM-Reuniao-PESOE-2027.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 12 - NOVO -->
+                    <div class="documento-card fade-up delay-11">
+                        <span class="documento-icon">📈</span>
+                        <h3>Tendência Principais Indicadores de SP</h3>
+                        <p>Tendencia Principais Indicadores de SP</p>
+                        <button onclick="baixarArquivo('Tendencia_Principais_Indicadores_de_SP.pptx', 'Tendencia-Principais-Indicadores-SP.pptx')" class="btn-download">
+                            📥 Baixar PowerPoint
+                        </button>
+                    </div>
+
+                    <!-- Documento 13 - NOVO -->
+                    <div class="documento-card fade-up delay-12">
+                        <span class="documento-icon">📄</span>
+                        <h3>Síntese do Primeiro Dia - Planificação Integrada 2026</h3>
+                        <p>Sintese do primeiro dia Planificaçao integrada 2026- Revista 02.07.26</p>
+                        <button onclick="baixarArquivo('Sintese_do_primeiro_dia_Planificacao_integrada_2026_Revista_02.07.26.docx', 'Sintese-Primeiro-Dia-Planificacao-Integrada-2026.docx')" class="btn-download">
+                            📥 Baixar DOCX
+                        </button>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 16px; background: var(--primary-bg); border-radius: 12px;">
+                    <p style="margin: 0; color: var(--text-dark); font-weight: 500;">
+                        📌 Total: <strong>13 documentos</strong> disponíveis para download
+                    </p>
                 </div>
             </div>
         </section>
@@ -176,6 +261,7 @@
                             <li><a href="index.html">Início</a></li>
                             <li><a href="agenda.html">Agenda</a></li>
                             <li><a href="participantes.html">Participantes</a></li>
+                            <li><a href="fotos.html">Fotos</a></li>
                             <li><a href="documentos.html">Documentos</a></li>
                             <li><a href="sobre.html">Sobre</a></li>
                         </ul>
@@ -229,7 +315,7 @@
             const btn = event.target;
             const textoOriginal = btn.innerHTML;
             
-            btn.innerHTML = ' Baixando...';
+            btn.innerHTML = '⏳ Baixando...';
             btn.disabled = true;
             
             fetch(url)
@@ -249,7 +335,7 @@
                     document.body.removeChild(link);
                     URL.revokeObjectURL(blobUrl);
                     
-                    btn.innerHTML = ' Baixado!';
+                    btn.innerHTML = '✅ Baixado!';
                     btn.disabled = false;
                     setTimeout(function() {
                         btn.innerHTML = textoOriginal;
@@ -286,7 +372,7 @@
 
         document.querySelectorAll('.documento-card').forEach(function(card, index) {
             card.classList.add('fade-up');
-            var delay = Math.min(index % 10 + 1, 10);
+            var delay = Math.min(index % 15 + 1, 15);
             card.classList.add('delay-' + delay);
         });
     </script>
