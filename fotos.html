@@ -31,16 +31,16 @@
 
         .fotos-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 30px auto;
         }
 
         .resumo-card {
             background: white;
             border-radius: 20px;
-            padding: 35px 30px;
+            padding: 35px 25px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
             border: 1px solid #e2e8f0;
@@ -53,21 +53,14 @@
             border-color: #d4a537;
         }
 
-        .resumo-card .icone-grande {
-            font-size: 56px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
         .resumo-card .dia-tag {
             display: inline-block;
-            background: #d4a537;
-            color: white;
             padding: 4px 16px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
             margin-bottom: 12px;
+            color: white;
         }
 
         .resumo-card .dia-tag.dia1 {
@@ -78,8 +71,12 @@
             background: #4299e1;
         }
 
+        .resumo-card .dia-tag.dia3 {
+            background: #48bb78;
+        }
+
         .resumo-card h2 {
-            font-size: 24px;
+            font-size: 22px;
             color: #1a202c;
             margin-bottom: 10px;
         }
@@ -102,16 +99,14 @@
         }
 
         .btn-google-drive {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
             background: #4285f4;
             color: white;
-            padding: 12px 28px;
+            padding: 12px 24px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
@@ -123,10 +118,6 @@
             box-shadow: 0 8px 25px rgba(66, 133, 244, 0.35);
         }
 
-        .btn-google-drive .drive-icon {
-            font-size: 24px;
-        }
-
         .btn-google-drive.dia2-drive {
             background: #48bb78;
         }
@@ -136,6 +127,15 @@
             box-shadow: 0 8px 25px rgba(72, 187, 120, 0.35);
         }
 
+        .btn-google-drive.dia3-drive {
+            background: #9b59b6;
+        }
+
+        .btn-google-drive.dia3-drive:hover {
+            background: #8e44ad;
+            box-shadow: 0 8px 25px rgba(155, 89, 182, 0.35);
+        }
+
         .total-fotos {
             text-align: center;
             margin-top: 20px;
@@ -143,7 +143,7 @@
             background: #f7fafc;
             border-radius: 12px;
             border: 1px solid #e2e8f0;
-            max-width: 900px;
+            max-width: 1100px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -158,6 +158,13 @@
             color: #1a202c;
         }
 
+        @media (max-width: 1024px) {
+            .fotos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 20px;
+            }
+        }
+
         @media (max-width: 768px) {
             .page-header h1 {
                 font-size: 28px;
@@ -170,17 +177,12 @@
             .resumo-card {
                 padding: 24px 20px;
             }
-            .resumo-card .icone-grande {
-                font-size: 40px;
-            }
             .resumo-card h2 {
                 font-size: 20px;
             }
             .btn-google-drive {
                 padding: 12px 20px;
                 font-size: 14px;
-                flex-wrap: wrap;
-                justify-content: center;
             }
         }
     </style>
@@ -215,7 +217,7 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1> Resumo Fotográfico</h1>
+                <h1>Resumo Fotográfico</h1>
                 <p>Registos dos dias da Reunião de Planificação Integrada</p>
             </div>
         </section>
@@ -225,11 +227,10 @@
                 <div class="fotos-grid">
                     <!-- DIA 1 -->
                     <div class="resumo-card">
-                        <span class="icone-grande"></span>
                         <span class="dia-tag dia1">Dia 1</span>
                         <h2>Dia da Abertura</h2>
                         <div class="data-evento">
-                             01 de Julho de 2026 · Ponta de Ouro
+                            01 de Julho de 2026 · Ponta de Ouro
                         </div>
                         <p>
                             Registos fotográficos do primeiro dia da <strong>Reunião de Planificação Integrada</strong>, 
@@ -238,18 +239,16 @@
                             representantes dos hospitais e parceiros de cooperação.
                         </p>
                         <a href="https://drive.google.com/drive/folders/1abU_dwGheBaRsi2-_SuQFF01sPPlrYtE" target="_blank" class="btn-google-drive">
-                            <span class="drive-icon"></span>
                             Baixar Fotos - Dia 1
                         </a>
                     </div>
 
                     <!-- DIA 2 -->
                     <div class="resumo-card">
-                        <span class="icone-grande"></span>
                         <span class="dia-tag dia2">Dia 2</span>
                         <h2>Segundo Dia</h2>
                         <div class="data-evento">
-                             02 de Julho de 2026 · Ponta de Ouro
+                            02 de Julho de 2026 · Ponta de Ouro
                         </div>
                         <p>
                             Registos fotográficos do segundo dia da <strong>Reunião de Planificação Integrada</strong>, 
@@ -258,14 +257,31 @@
                             com a participação de todos os envolvidos.
                         </p>
                         <a href="https://drive.google.com/drive/folders/1YChamPYdLkX-F-vGdUnyGYhLHDS7SPAc" target="_blank" class="btn-google-drive dia2-drive">
-                            <span class="drive-icon"></span>
                             Baixar Fotos - Dia 2
+                        </a>
+                    </div>
+
+                    <!-- DIA 3 -->
+                    <div class="resumo-card">
+                        <span class="dia-tag dia3">Dia 3</span>
+                        <h2>Terceiro e Último Dia</h2>
+                        <div class="data-evento">
+                            03 de Julho de 2026 · Ponta de Ouro
+                        </div>
+                        <p>
+                            Registos fotográficos do terceiro e último dia da <strong>Reunião de Planificação Integrada</strong>, 
+                            com o encerramento do evento, apresentação do Protocolo de Pesquisa sobre Prematuridade, 
+                            consensos finais, sessão de encerramento e almoço de confraternização 
+                            entre todos os participantes.
+                        </p>
+                        <a href="https://drive.google.com/drive/folders/1AzJKuADqFub7prF8B8Yt3hrNkDSvil4P" target="_blank" class="btn-google-drive dia3-drive">
+                            Baixar Fotos - Dia 3
                         </a>
                     </div>
                 </div>
 
                 <div class="total-fotos">
-                    <p> <strong>2 dias</strong> de registos fotográficos disponíveis para download</p>
+                    <p><strong>3 dias</strong> de registos fotográficos disponíveis para download</p>
                 </div>
             </div>
         </section>
